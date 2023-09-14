@@ -22,7 +22,6 @@ async function textCatImage() {
         }
 
         let url = catTextUrl + text;
-        console.log(url);
         let response = await fetch(url)
 
         return response.url;
@@ -36,7 +35,6 @@ async function textCatImage() {
 textBtn.addEventListener('click', async () => {
     let imageLink = await textCatImage();
     let img = document.querySelector('.cat-image')
-    console.log(imageLink)
     img.setAttribute('src', imageLink);
 })
 
@@ -49,10 +47,10 @@ textBtn.addEventListener('click', async () => {
 async function getCatImage() {
     try {
         let res = await fetch(catApiUrl)
-        console.log("\n\ncat api response", res)
 
         return res.url;
-    } catch (e) {
+    } 
+    catch (e) {
         console.log(e)
         return 'No image found';
     }
@@ -60,7 +58,6 @@ async function getCatImage() {
 catBtn.addEventListener('click', async () => {
     let imageLink = await getCatImage();
     let img = document.querySelector('.cat-image')
-    console.log(imageLink)
     img.setAttribute('src', imageLink);
 })
 
@@ -82,12 +79,10 @@ let dogBtn = document.querySelector('#dog-btn')
 async function getDogImage() {
     try {
         let res = await axios.get(dogApiUrl)
-        console.log("\n\ndog api response", res)
-        console.log("dog api data", res.data)
 
         return res.data.message;
-
-    } catch (e) {
+    } 
+    catch (e) {
         console.log(e)
         return 'No image found';
     }
@@ -95,7 +90,6 @@ async function getDogImage() {
 dogBtn.addEventListener('click', async () => {
     let imageLink = await getDogImage();
     let img = document.querySelector('.dog-image')
-    console.log(imageLink)
     img.setAttribute('src', imageLink);
 })
 
