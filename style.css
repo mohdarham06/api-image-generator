@@ -1,0 +1,137 @@
+/* UNIVERSAL SELECTOR */
+* {
+    font-family: "Fira sans", sans-serif;
+
+    /** It will remove all default 
+    ** margins and paddings */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+
+/* || ROOT || */
+:root {
+    --dark: #2d374e;
+    --darkest: #241311;
+    --grey: #7183a5;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+    --light: #EEE;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #ffffff;
+    color: whitesmoke;
+
+}
+
+.root {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--darkest);
+    /* scroll root area not only main*/
+    overflow-y: auto;
+}
+
+
+
+main {
+    width: 100%;
+    flex-grow: 1;
+    /* to scroll main area not the root*/
+    /* overflow-y: auto; */
+}
+
+
+header,
+footer {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2,
+h3 {
+    margin-bottom: 1rem;
+}
+
+.type-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 80%;
+    height: auto;
+}
+
+input {
+    background: none;
+    outline: none;
+    border: 0.1rem solid #cac5c5;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.4em 0.3rem;
+    transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #cac5c5;
+    opacity: 0.5;
+}
+
+
+
+button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #142222;
+    border: 1px solid white;
+    color: #fff;
+    transition: all 250ms;
+}
+
+button:hover {
+    background: white;
+    border: solid 1px var(--darkest);
+    color: var(--darkest);
+}
+
+
+
+footer .credit{
+    color: #87898d;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer div {
+    height: 1px;
+    width: 90%;
+    background-color: #87898d;
+    margin-bottom: 1rem;
+}
