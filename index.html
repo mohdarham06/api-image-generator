@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats and Dogs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">
+        <header>
+            <h1>Generate Random Images</h1>
+        </header>
+
+
+        <main>
+            <div class="type-container">
+                <h3>Cats</h3>
+                <div>
+                    <input style="width: 120px;" type="text" id="catText" placeholder="helloo" required>
+                    <button id="text-submit">Generate with text</button>
+                </div>
+                <button id="cat-btn">Generate Cat Image</button>
+                <div class="image-container">
+                    <img class="cat-image" src="" alt="">
+                </div>
+            </div>
+            
+            <div class="type-container">
+                <h3>Dogs</h3>
+                <button id="dog-btn">Generate Dog Image</button>
+                <div class="image-container">
+                    <img class="dog-image" src="" alt="">
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <div></div>
+            <a class="credit" href="https://mohdarham.netlify.app/" target="_blank"> &copy; Mohd Arham 2023 &lt;/&gt; </a>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
